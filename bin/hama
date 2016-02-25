@@ -101,6 +101,9 @@ fi
 CLASSPATH="${HAMA_CONF_DIR}"
 CLASSPATH=${CLASSPATH}:$JAVA_HOME/lib/tools.jar
 
+# Add HADOOP_CONF to CLASSPATH
+CLASSPATH=${CLASSPATH}:${HADOOP_CONF_DIR}
+
 # for developers, add Hama classes to CLASSPATH
 if [ -d "$HAMA_HOME/core/target/classes" ]; then
   CLASSPATH=${CLASSPATH}:$HAMA_HOME/core/target/classes
@@ -223,3 +226,4 @@ HAMA_OPTS="$HAMA_OPTS -Dhama.policy.file=$HAMA_POLICYFILE"
 
 # run it
 exec "$JAVA" $JAVA_HEAP_MAX $HAMA_OPTS -classpath "$CLASSPATH" $CLASS "$@"
+

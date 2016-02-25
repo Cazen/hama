@@ -34,4 +34,7 @@
 # export HAMA_SSH_OPTS="-o ConnectTimeout=1 -o SendEnv=HAMA_CONF_DIR"
 
 # Tell Hama whether it should manage it's own instance of Zookeeper or not.
-# export HAMA_MANAGES_ZK=true 
+# export HAMA_MANAGES_ZK=true
+
+# allows to use the Hadoop configuration files
+# export HADOOP_CONF_DIR=${HADOOP_HOME}/conf
